@@ -13,7 +13,7 @@ export default function Register() {
     const username = formData.get("username");
     const password = formData.get("password");
     try {
-      await register({ username, password });
+      await register(username, password);
       setPage("activities");
     } catch (e) {
       setError(e.message);
